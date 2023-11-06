@@ -1,0 +1,21 @@
+@import "../../variables";
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+}
+
+.signup{
+    padding: 1rem 2rem;
+    h1{
+        font-size: 1.75rem;
+        margin-bottom: 1.5rem;
+    }
+}
+
+@import "modules/wrappper";
+@import "modules/form";
+@import "modules/link";
