@@ -11,6 +11,39 @@
   <div class="wrapper">
     <section class="signup">
         <h1>Zarejestruj się</h1>
+        <form action="#" method="POST">
+          <div class="form__content">
+              <label class="form__content__field">Imię:
+                <input type="text" name="firstName" id="firstName">
+              </label>
+              <label class="form__content__field">Nazwisko:
+                <input type="text" name="lastName" id="lastName">
+              </label>
+              <label class="form__content__field">Adres Email:
+                <input type="email" name="email" id="email">
+              </label>
+              <label class="form__content__field">Hasło:
+                <input type="password" name="password" id="password">
+              </label>
+              <label class="form__content__field">Powtórz Hasło:
+                <input type="password" name="confirmPassword" id="confirmPassword">
+              </label>
+              <div class="form__content__field--gender">
+                <label class="form__content__field">
+                  <input type="radio" name="gender" value="male"> Mężczyzna
+                </label>
+                <label class="form__content__field">
+                  <input type="radio" name="gender" value="female"> Kobieta
+                </label>
+              </div>
+              <input type="submit" value="Zarejestruj się">
+          </div>
+          <div class="form__error-container">Error message</div>
+        </form>
+        <div class="signup__link">
+          <p class="signup__link--text">Posiadasz konto?</p>
+          <a class="signup__link--link" href="#">Zaloguj się!</a>
+        </div>
     </section>
   </div>
 </body>
