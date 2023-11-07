@@ -1,6 +1,15 @@
-.signup__link{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: .2rem;
+.signup__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.2rem;
+
+  &--link {
+    color: $link-color;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      color: $dark-blue;
+    }
+  }
 }

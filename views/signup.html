@@ -15,20 +15,20 @@
           <div class="form__field--personal-information">
             <label class="form__field"
               >Imię:
-              <input type="text" name="firstName" id="firstName" />
+              <input type="text" name="firstName" id="firstName" required/>
             </label>
             <label class="form__field"
               >Nazwisko:
-              <input type="text" name="lastName" id="lastName" />
+              <input type="text" name="lastName" id="lastName" required/>
             </label>
           </div>
           <label class="form__field"
             >Adres Email:
-            <input type="email" name="email" id="email" />
+            <input type="email" name="email" id="email" required/>
           </label>
           <label class="form__field"
             >Hasło:
-            <input type="password" name="password" id="password" />
+            <input type="password" name="password" id="password" required/>
           </label>
           <label class="form__field"
             >Powtórz Hasło:
@@ -36,11 +36,12 @@
               type="password"
               name="confirmPassword"
               id="confirmPassword"
+              required
             />
           </label>
           <div class="form__field--gender">
             <label class="form__field--gender__value">
-              <input type="radio" name="gender" value="male" /> Mężczyzna
+              <input type="radio" name="gender" value="male" checked /> Mężczyzna
             </label>
             <label class="form__field--gender__value">
               <input type="radio" name="gender" value="female" /> Kobieta
