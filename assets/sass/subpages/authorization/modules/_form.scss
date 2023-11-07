@@ -1,5 +1,6 @@
 .form {
   &__field {
+    position: relative;
     display: flex;
     flex-direction: column;
     text-align: left;
@@ -23,6 +24,22 @@
       grid-template-columns: 4fr 8fr;
       gap: 1rem;
     }
+
+    &--password-icon {
+      cursor: pointer;
+      position: absolute;
+      background-color: unset;
+      border: none;
+      padding: 0.2rem;
+      right: 0.5rem;
+      top: 70%;
+      transform: translateY(-45%);
+
+      img {
+        width: 1.2rem;
+      }
+    }
+
     &--gender {
       display: flex;
       justify-content: space-around;
