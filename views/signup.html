@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../assets/css/signup.css" />
   </head>
   <body>
+    <div class="wrapper signup-img"></div>
     <div class="wrapper">
       <section class="signup">
         <h1>Zarejestruj się</h1>
@@ -15,20 +16,20 @@
           <div class="form__field--personal-information">
             <label class="form__field"
               >Imię:
-              <input type="text" name="firstName" id="firstName" required/>
+              <input type="text" name="firstName" id="firstName" required />
             </label>
             <label class="form__field"
               >Nazwisko:
-              <input type="text" name="lastName" id="lastName" required/>
+              <input type="text" name="lastName" id="lastName" required />
             </label>
           </div>
           <label class="form__field"
             >Adres Email:
-            <input type="email" name="email" id="email" required/>
+            <input type="email" name="email" id="email" required />
           </label>
           <label class="form__field"
             >Hasło:
-            <input type="password" name="password" id="password" required/>
+            <input type="password" name="password" id="password" required />
           </label>
           <label class="form__field"
             >Powtórz Hasło:
@@ -41,18 +42,25 @@
           </label>
           <div class="form__field--gender">
             <label class="form__field--gender__value">
-              <input type="radio" name="gender" value="male" checked /> Mężczyzna
+              <input type="radio" name="gender" value="male" checked />
+              Mężczyzna
             </label>
             <label class="form__field--gender__value">
               <input type="radio" name="gender" value="female" /> Kobieta
             </label>
           </div>
-          <input class="form__submit-btn" type="submit" value="Zarejestruj się" />
+          <input
+            class="form__submit-btn"
+            type="submit"
+            value="Zarejestruj się"
+          />
           <div class="form__error-container">Error message</div>
         </form>
         <div class="signup__link">
-          <p class="signup__link--text">Posiadasz konto?</p>
-          <a class="signup__link--link" href="#">Zaloguj się!</a>
+          <p class="signup__link--text">
+            Posiadasz konto?
+            <a class="signup__link--link" href="#">Zaloguj się!</a>
+          </p>
         </div>
       </section>
     </div>

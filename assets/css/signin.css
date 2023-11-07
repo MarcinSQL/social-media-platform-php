@@ -6,20 +6,20 @@ body {
   min-height: 100vh;
 }
 
-.signup {
+.signin {
   width: 50vw;
   max-width: 70%;
   padding: 1rem 2rem;
 }
-.signup h1 {
+.signin h1 {
   font-size: 1.75rem;
   margin-bottom: 1.5rem;
 }
-.signup-img {
-  background-image: url("../img/signup-bg.svg");
+.signin-img {
+  background-image: url("../img/signin-bg.svg");
 }
 @media only screen and (max-width: 768px) {
-  .signup {
+  .signin {
     width: auto;
     max-width: none;
   }
@@ -152,4 +152,4 @@ body {
 }
 .signup__link--link:hover {
   color: #0b5192;
-}/*# sourceMappingURL=signup.css.map */
+}/*# sourceMappingURL=signin.css.map */

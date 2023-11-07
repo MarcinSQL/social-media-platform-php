@@ -1,0 +1,32 @@
+@import "../../variables";
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+}
+
+.signup {
+  width: 50vw;
+  max-width: 70%;
+  padding: 1rem 2rem;
+  h1 {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  &-img {
+    background-image: url("../img/signup-bg.svg");
+  }
+
+  @media only screen and (max-width: 768px) {
+    width: auto;
+    max-width: none;
+  }
+}
+
+@import "modules/wrappper";
+@import "modules/form";
+@import "modules/link";
