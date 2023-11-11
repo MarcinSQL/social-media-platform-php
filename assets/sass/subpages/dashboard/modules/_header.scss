@@ -1,0 +1,84 @@
+.header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    background-color: $blue;
+    color: $white;
+    align-items: center;
+    padding: 1rem 4rem;
+
+    &__logo{
+        display: flex;
+        flex-wrap: nowrap;
+        gap: .3rem;
+        font-weight: 600;
+        font-size: 2rem;
+        & span:last-child{
+            color: $text-sec;
+        }
+    }
+
+    &__navigation{
+        &__list{
+            display: flex;
+            gap: 1rem;
+            padding: 0;
+            margin: 0;
+            &__item{
+                cursor: pointer;
+                list-style: none;
+                transition: all .3s ease-in-out;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 0 1rem;
+                & img{
+                    width: 24px;
+                    margin: .5rem 0;
+                }
+                &:hover{
+                    color: $text-sec;
+                }
+            }
+        }
+    }
+
+    &__user-info{
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+        display: flex;
+        align-items: center;
+        color: $white;
+
+
+        &__picture{
+            transition: all .6s ease-in-out;
+            border-radius: 50%;
+            width: 48px;
+            height: 48px;
+        }
+        &__nickname{
+            transition: all .6s ease-in-out;
+            margin: 0 .5rem 0 1rem;
+        }
+        & img:last-of-type{
+            transition: all .6s ease-in-out;
+            width: 12px;
+        }
+        
+        &:hover{
+            &__picture{
+                border-radius: 25%;
+            }
+            & span{
+                color: $text-sec;
+            }
+            & img:last-of-type{
+                transform: rotate(-360deg);
+            }
+        }
+
+    }
+}
