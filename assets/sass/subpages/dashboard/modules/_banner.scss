@@ -29,7 +29,7 @@
     bottom: 0;
     right: 0;
     margin: 1rem;
-    background-color: $border-color;
+    background-color: $blue;
     border: none;
     border-radius: 50%;
     padding: .5rem;
@@ -40,7 +40,7 @@
         height: 32px;
     }
     &:hover{
-        background-color: $light-blue;
+        background-color: transparent;
     }
   }
 }

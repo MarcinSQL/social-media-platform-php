@@ -1,0 +1,15 @@
+.friends {
+  width: 40%;
+  .friend {
+    border-radius: 16px;
+    background-color: $border-color;
+    width: 150px;
+
+    &__nickname {
+      display: block;
+      padding: 0.5rem 1rem;
+      font-weight: 700;
+      text-align: center;
+    }
+  }
+}

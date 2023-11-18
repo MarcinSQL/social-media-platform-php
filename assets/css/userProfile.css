@@ -116,7 +116,7 @@
   bottom: 0;
   right: 0;
   margin: 1rem;
-  background-color: #ccc;
+  background-color: #1070ca;
   border: none;
   border-radius: 50%;
   padding: 0.5rem;
@@ -128,7 +128,22 @@
   height: 32px;
 }
 .banner__settings-btn:hover {
-  background-color: #3b90e0;
+  background-color: transparent;
+}
+
+.friends {
+  width: 40%;
+}
+.friends .friend {
+  border-radius: 16px;
+  background-color: #ccc;
+  width: 150px;
+}
+.friends .friend__nickname {
+  display: block;
+  padding: 0.5rem 1rem;
+  font-weight: 700;
+  text-align: center;
 }
 
 .footer {
