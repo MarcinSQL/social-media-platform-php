@@ -36,4 +36,22 @@
       }
     }
   }
+
+  .post{
+    background-color: $border-color;
+    border-radius: 16px;
+    padding: .5rem 1rem;
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+    & img{
+        width: 64px;
+    }
+    &__content{
+        &__nickname{
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+    }
+  }
 }
