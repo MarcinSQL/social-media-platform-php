@@ -1,4 +1,5 @@
 .header {
+  z-index: 2;
   width: 100%;
   height: 80px;
   position: fixed;
@@ -81,6 +82,34 @@
 .main {
   padding-top: 80px;
   min-height: 100vh;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.banner {
+  position: relative;
+  background-color: #b9d3ec;
+  height: 250px;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+}
+.banner__user-profile {
+  position: absolute;
+  bottom: -10%;
+  left: 20%;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-weight: 700;
+  font-size: 2rem;
+}
+.banner__user-profile img {
+  border-radius: 50%;
+  width: 128px;
+  height: 128px;
+}
+.banner__user-profile span {
+  padding: 2rem;
 }
 
 .footer {
