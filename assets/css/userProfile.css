@@ -88,7 +88,7 @@
 
 .banner {
   position: relative;
-  background-color: #b9d3ec;
+  background-color: #3b90e0;
   height: 250px;
   border-bottom-left-radius: 16px;
   border-bottom-right-radius: 16px;
@@ -110,6 +110,25 @@
 }
 .banner__user-profile span {
   padding: 2rem;
+}
+.banner__settings-btn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 1rem;
+  background-color: #ccc;
+  border: none;
+  border-radius: 50%;
+  padding: 0.5rem;
+  padding-bottom: 0.3rem;
+  transition: all 0.3s ease-in-out;
+}
+.banner__settings-btn img {
+  width: 32px;
+  height: 32px;
+}
+.banner__settings-btn:hover {
+  background-color: #3b90e0;
 }
 
 .footer {

@@ -1,6 +1,6 @@
 .banner {
   position: relative;
-  background-color: $text-sec;
+  background-color: $light-blue;
   height: 250px;
   border-bottom-left-radius: 16px;
   border-bottom-right-radius: 16px;
@@ -21,6 +21,26 @@
     }
     & span {
       padding: 2rem;
+    }
+  }
+
+  &__settings-btn{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 1rem;
+    background-color: $border-color;
+    border: none;
+    border-radius: 50%;
+    padding: .5rem;
+    padding-bottom: .3rem;
+    transition: all .3s ease-in-out;
+    & img{
+        width: 32px;
+        height: 32px;
+    }
+    &:hover{
+        background-color: $light-blue;
     }
   }
 }
