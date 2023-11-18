@@ -74,4 +74,12 @@
 }
 .header__user-info:hover img:last-of-type {
   transform: rotate(-360deg);
+}
+
+.footer {
+  width: 100%;
+  padding: 1rem 2rem;
+  text-align: center;
+  background-color: #1070ca;
+  color: #fff;
 }/*# sourceMappingURL=userProfile.css.map */
