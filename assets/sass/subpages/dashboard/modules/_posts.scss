@@ -1,0 +1,39 @@
+.posts {
+  width: 60%;
+  &__new-post {
+    background-color: $border-color;
+    border-radius: 16px;
+    padding: 1rem;
+    position: relative;
+    width: 100%;
+    &__text {
+      display: block;
+      overflow: hidden;
+      resize: none;
+      width: 100%;
+      min-height: 100px;
+      border: none;
+      background-color: transparent;
+      margin-bottom: 2.5rem;
+      &:focus {
+        outline: none;
+      }
+    }
+    &__submit-btn {
+      cursor: pointer;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      margin: 1rem;
+      background-color: $blue;
+      border: none;
+      border-radius: 8px;
+      color: $white;
+      padding: 0.5rem 1rem;
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        background-color: $light-blue;
+      }
+    }
+  }
+}
