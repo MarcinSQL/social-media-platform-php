@@ -131,6 +131,11 @@
   background-color: transparent;
 }
 
+.content {
+  display: flex;
+  margin: 2rem 0;
+}
+
 .friends {
   width: 40%;
 }

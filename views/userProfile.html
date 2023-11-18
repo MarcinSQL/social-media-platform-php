@@ -53,38 +53,41 @@
           <img src="../assets/img/setting-icon.svg" alt="Ustawienia." />
         </button>
       </section>
-      <section class="friends">
-        <h2 class="friends__heading">Przyjaciele</h2>
-        <div class="friend">
-          <img
-            class="friend__picture"
-            src="../assets/img/default-profile-picture-female-icon.svg"
-            alt="Awatar przyjaciela użytkownika."
-          />
-          <span class="friend__nickname">User Friend</span>
-        </div>
-      </section>
       <section class="content">
-        <form action="#" method="post" class="content__new-post">
-          <textarea
-            name="post"
-            id=""
-            cols="30"
-            rows="10"
-            placeholder="Co masz na myśli?"
-          ></textarea>
-          <button type="submit">Udostępnij wpis!</button>
-        </form>
-        <div class="content__post">
-          <img
-            src="../assets/img/default-profile-picture-male-icon.svg"
-            alt="Awatar użytkownika."
-          />
-          <div class="post__content">
-            <p class="post__content__nickname">User</p>
-            <p class="post__content__message">My old post</p>
+        <section class="friends">
+          <h2 class="friends__heading">Przyjaciele</h2>
+          <div class="friend">
+            <img
+              class="friend__picture"
+              src="../assets/img/default-profile-picture-female-icon.svg"
+              alt="Awatar przyjaciela użytkownika."
+            />
+            <span class="friend__nickname">User Friend</span>
           </div>
-        </div>
+        </section>
+        <section class="posts">
+          <form action="#" method="post" class="posts__new-post">
+            <textarea
+              name="post"
+              id=""
+              cols="30"
+              rows="10"
+              placeholder="Co masz na myśli?"
+            ></textarea>
+            <button type="submit">Udostępnij wpis!</button>
+          </form>
+          <div class="post">
+            <img
+              class="post__picture"
+              src="../assets/img/default-profile-picture-male-icon.svg"
+              alt="Awatar użytkownika."
+            />
+            <div class="post__content">
+              <p class="post__content__nickname">User</p>
+              <p class="post__content__message">My old post</p>
+            </div>
+          </div>
+        </section>
       </section>
     </main>
     <footer class="footer">
