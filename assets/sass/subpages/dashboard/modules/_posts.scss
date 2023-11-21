@@ -1,7 +1,7 @@
 .posts {
   width: 60%;
   &__new-post {
-    background-color: $border-color;
+    background-color: $elements-color;
     border-radius: 16px;
     padding: 1rem;
     position: relative;
@@ -38,7 +38,7 @@
   }
 
   .post{
-    background-color: $border-color;
+    background-color: $elements-color;
     border-radius: 16px;
     padding: .5rem 1rem;
     margin-top: 2rem;
