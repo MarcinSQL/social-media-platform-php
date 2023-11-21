@@ -38,4 +38,11 @@ if (!$db_connect) {
         PRIMARY KEY (`Id`),
         UNIQUE KEY (`Post_Id`)
     )");
+
+    $follow_list_create_tab = mysqli_query($db_connect, "CREATE TABLE IF NOT EXISTS `follow_list`(
+        `Id` INT(50) UNSIGNED NOT NULL AUTO_INCREMENT,
+        `Follower_Id` INT(20) NOT NULL,
+        `User_Id` INT(20) NOT NULL,
+        PRIMARY KEY (`Id`)
+    )");
 }
