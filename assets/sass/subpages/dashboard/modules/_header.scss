@@ -52,6 +52,7 @@
   }
 
   &__user-info {
+    position: relative;
     cursor: pointer;
     background-color: transparent;
     border: none;
@@ -84,6 +85,41 @@
       & img:last-of-type {
         transform: rotate(-360deg);
       }
+    }
+  }
+
+  &__modal {
+    position: absolute;
+    bottom: -99%;
+    right: 2rem;
+    background-color: $blue;
+
+    & img {
+      width: 16px;
+    }
+    &__btn {
+      color: $white;
+      background-color: transparent;
+      border: none;
+      padding: 0.5rem 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      height: 45px;
+      width: 100%;
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        background-color: $light-blue;
+        &:last-of-type {
+          border-bottom-left-radius: 8px;
+          border-bottom-right-radius: 8px;
+        }
+      }
+    }
+    &:last-child {
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
     }
   }
 }

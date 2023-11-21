@@ -48,6 +48,7 @@
   transform: rotate(15deg) scale(1.2);
 }
 .header__user-info {
+  position: relative;
   cursor: pointer;
   background-color: transparent;
   border: none;
@@ -77,6 +78,39 @@
 }
 .header__user-info:hover img:last-of-type {
   transform: rotate(-360deg);
+}
+.header__modal {
+  position: absolute;
+  bottom: -99%;
+  right: 2rem;
+  background-color: #1070ca;
+}
+.header__modal img {
+  width: 16px;
+}
+.header__modal__btn {
+  color: #fff;
+  background-color: transparent;
+  border: none;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  height: 45px;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+}
+.header__modal__btn:hover {
+  background-color: #3b90e0;
+}
+.header__modal__btn:hover:last-of-type {
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+.header__modal:last-child {
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
 }
 
 .main {
