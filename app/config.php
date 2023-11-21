@@ -32,7 +32,6 @@ if (!$db_connect) {
         `User_Id` INT(20) NOT NULL,
         `Post` TEXT NOT NULL,
         `UserImg` VARCHAR(400) NULL,
-        `Comments` INT(11) NULL,
         `Likes` INT(11) NOT NULL DEFAULT 0,
         `Date` TIMESTAMP NOT NULL,
         PRIMARY KEY (`Id`),

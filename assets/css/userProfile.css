@@ -245,32 +245,41 @@
   padding: 0.5rem 1rem;
   margin-top: 2rem;
   display: flex;
+  align-items: flex-start;
   gap: 1rem;
 }
 .posts .post img {
+  margin: 1rem 0;
   width: 64px;
 }
 .posts .post__content__nickname {
   font-weight: 700;
   font-size: 1.1rem;
 }
-.posts .post__content__like-section {
+.posts .post__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 2rem;
+}
+.posts .post__footer__like-section {
   display: flex;
   align-items: center;
   width: -moz-fit-content;
   width: fit-content;
 }
-.posts .post__content__like-section__like-btn {
+.posts .post__footer__like-section__like-btn {
   cursor: pointer;
   background-color: transparent;
   border: none;
   width: auto;
   height: 20px;
 }
-.posts .post__content__like-section__like-btn img {
+.posts .post__footer__like-section__like-btn img {
+  margin: 0;
   width: 16px;
 }
-.posts .post__content__like-section__like-counter {
+.posts .post__footer__like-section__like-counter {
   font-weight: 700;
 }
 

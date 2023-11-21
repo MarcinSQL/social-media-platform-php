@@ -37,40 +37,48 @@
     }
   }
 
-  .post{
+  .post {
     background-color: $elements-color;
     border-radius: 16px;
-    padding: .5rem 1rem;
+    padding: 0.5rem 1rem;
     margin-top: 2rem;
     display: flex;
+    align-items: flex-start;
     gap: 1rem;
-    & img{
-        width: 64px;
+    & img {
+      margin: 1rem 0;
+      width: 64px;
     }
-    &__content{
-        &__nickname{
-            font-weight: 700;
-            font-size: 1.1rem;
-        }
-
-        &__like-section{
-          display: flex;
-          align-items: center;
-          width: fit-content;
-          &__like-btn{
-            cursor: pointer;
-            background-color: transparent;
-            border: none;
-            width: auto;
-            height: 20px;
-            & img{
-              width: 16px;
-            }
+    &__content {
+      &__nickname {
+        font-weight: 700;
+        font-size: 1.1rem;
+      }
+    }
+    &__footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      gap: 2rem;
+      &__like-section {
+        display: flex;
+        align-items: center;
+        width: fit-content;
+        &__like-btn {
+          cursor: pointer;
+          background-color: transparent;
+          border: none;
+          width: auto;
+          height: 20px;
+          & img {
+            margin: 0;
+            width: 16px;
           }
-          &__like-counter{
-            font-weight: 700;
-          }
         }
+        &__like-counter {
+          font-weight: 700;
+        }
+      }
     }
   }
 }
