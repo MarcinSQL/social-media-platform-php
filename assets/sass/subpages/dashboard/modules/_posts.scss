@@ -52,6 +52,25 @@
             font-weight: 700;
             font-size: 1.1rem;
         }
+
+        &__like-section{
+          display: flex;
+          align-items: center;
+          width: fit-content;
+          &__like-btn{
+            cursor: pointer;
+            background-color: transparent;
+            border: none;
+            width: auto;
+            height: 20px;
+            & img{
+              width: 16px;
+            }
+          }
+          &__like-counter{
+            font-weight: 700;
+          }
+        }
     }
   }
 }
