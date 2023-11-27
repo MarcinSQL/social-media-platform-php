@@ -20,23 +20,23 @@
       <form id="registrationForm" method="POST">
         <div class="form__field--personal-information">
           <label class="form__field">Imię:
-            <input type="text" name="firstName" id="firstName" required />
+            <input type="text" name="firstName" id="firstName" />
           </label>
           <label class="form__field">Nazwisko:
-            <input type="text" name="lastName" id="lastName" required />
+            <input type="text" name="lastName" id="lastName" />
           </label>
         </div>
         <label class="form__field">Adres Email:
-          <input type="email" name="email" id="email" required />
+          <input type="email" name="email" id="email" />
         </label>
         <label class="form__field">Hasło:
-          <input type="password" name="password" id="password" required />
-          <button class="form__field--password-icon">
+          <input type="password" name="password" id="password" />
+          <button type="button" class="form__field--password-icon" id="showPassword-btn">
             <img src="../assets/img/eye-icon.svg" alt="Pokaż swoje hasło." />
           </button>
         </label>
         <label class="form__field">Powtórz Hasło:
-          <input type="password" name="confirmPassword" id="confirmPassword" required />
+          <input type="password" name="confirmPassword" id="confirmPassword" />
         </label>
         <div class="form__field--gender">
           <label class="form__field--gender__value">
@@ -86,6 +86,7 @@
       </div>
     </section>
   </div>
+  <script src="../assets/js/passwordShow.js"></script>
 </body>
 
 </html>
