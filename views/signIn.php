@@ -39,17 +39,19 @@
             $email = $_POST["email"];
             $password = $_POST["password"];
 
-            if ($stmt = mysqli_prepare($db_connect, "SELECT `User_Id`, `UserFirstName`, `UserLastName` ,`UserPassword` FROM `users` WHERE `UserEmail` = '$email'")) {
+            if ($stmt = mysqli_prepare($db_connect, "SELECT `User_Id`, `UserFirstName`, `UserLastName`, `UserGender` , `UserImg` ,`UserPassword` FROM `users` WHERE `UserEmail` = '$email'")) {
               mysqli_stmt_execute($stmt);
               mysqli_stmt_store_result($stmt);
               if (mysqli_stmt_num_rows($stmt) > 0) {
-                mysqli_stmt_bind_result($stmt, $mysqlId, $mysqlFirstName, $mysqlLastName, $mysqlPassword);
+                mysqli_stmt_bind_result($stmt, $mysqlId, $mysqlFirstName, $mysqlLastName, $mysqlGender, $mysqlImg, $mysqlPassword);
                 mysqli_stmt_fetch($stmt);
                 if (password_verify($password, $mysqlPassword)) {
                   session_regenerate_id();
                   $_SESSION['loggedin'] = TRUE;
                   $_SESSION['firstName'] = $mysqlFirstName;
                   $_SESSION['lastName'] = $mysqlLastName;
+                  $_SESSION['userImg'] = $mysqlUserImg;
+                  $_SESSION['userGender'] = $mysqlGender;
                   $_SESSION['id'] = $mysqlId;
                   header('location: mainPage.php');
                   exit;
