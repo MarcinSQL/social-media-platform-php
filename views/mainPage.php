@@ -16,6 +16,7 @@
 <body>
     <header class="header">
         <div class="header__logo">
+            <span class="header__logo--mobile">S</span>
             <span>Social</span>
             <span>Media</span>
         </div>

@@ -83,3 +83,13 @@
     }
   }
 }
+
+@media only screen and (max-width: 768px) {
+  .banner__user-profile{
+    left: 0;
+    bottom: 0;
+    & img{
+      display: none;
+    }
+  }
+}
