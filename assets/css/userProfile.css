@@ -80,6 +80,7 @@
   transform: rotate(-360deg);
 }
 .header__modal {
+  display: none;
   position: absolute;
   bottom: -99%;
   right: 2rem;
