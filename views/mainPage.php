@@ -20,33 +20,38 @@
         </div>
         <nav class="header__navigation">
             <ul class="header__navigation__list">
-                <li class="header__navigation__list__item">
-                    <img src="../assets/img/home-icon.svg" alt="Strona główna." /><span>Strona główna</span>
-                </li>
-                <li class="header__navigation__list__item">
-                    <img src="../assets/img/search-icon.svg" alt="Wyszukaj." /><span>Szukaj</span>
-                </li>
+                <a href="mainPage.php">
+                    <li class="header__navigation__list__item">
+                        <img src="../assets/img/home-icon.svg" alt="Strona główna." /><span>Strona główna</span>
+                    </li>
+                </a>
+                <a href="search.php">
+                    <li class="header__navigation__list__item">
+                        <img src="../assets/img/search-icon.svg" alt="Wyszukaj." /><span>Szukaj</span>
+                    </li>
+                </a>
             </ul>
         </nav>
-        <button class="header__user-info">
+        <button class="header__user-info" id="header__user-info-btn">
             <img class="header__user-info__picture" src="../assets/img/default-profile-picture-male-icon.svg" alt="Awatar użytkownika." />
             <span class="header__user-info__nickname">User</span>
             <img src="../assets/img/arrow-down-icon.svg" alt="Strzałka rozwijająca opcje." />
         </button>
-        <div class="header__modal">
-            <button class="header__modal__btn">
+        <div class="header__modal" id="header__modal">
+            <a href="userProfile.html" class="header__modal__btn">
                 Profil użytkownika
                 <img src="../assets/img/user-profile-icon.svg" alt="Profil użytkownika." />
-            </button>
-            <button class="header__modal__btn">
+            </a>
+            <a href="../app/logout.php" class="header__modal__btn">
                 Wyloguj się
                 <img src="../assets/img/logout-icon.svg" alt="Wyloguj się." />
-            </button>
+            </a>
         </div>
     </header>
-    <main>
+    <main class="main" id="main">
 
     </main>
+    <script src="../assets/js/modalShow.js"></script>
 </body>
 
 </html>

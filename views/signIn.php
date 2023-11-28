@@ -56,7 +56,7 @@
                   echo ("<div class=\"form__error-container\">Podano złe hasło</div>");
                 }
               } else {
-                echo ("<div class=\"form__error-container\">Podano zły email</div>");
+                echo ("<div class=\"form__error-container\">Nie znaleziono użytkownika</div>");
               }
             } else {
               echo ("<div class=\"form__error-container\">Nie znaleziono użytkownika</div>");
