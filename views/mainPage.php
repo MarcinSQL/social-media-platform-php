@@ -38,7 +38,7 @@
             <img src="../assets/img/arrow-down-icon.svg" alt="Strzałka rozwijająca opcje." />
         </button>
         <div class="header__modal" id="header__modal">
-            <a href="userProfile.html" class="header__modal__btn">
+            <a href="userProfile.php" class="header__modal__btn">
                 Profil użytkownika
                 <img src="../assets/img/user-profile-icon.svg" alt="Profil użytkownika." />
             </a>

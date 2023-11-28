@@ -234,6 +234,12 @@
 .friends__list .friend:hover {
   transform: scale(1.1) rotate(5deg);
 }
+.friends__list__error-message {
+  width: 100%;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
 
 .posts {
   width: 60%;

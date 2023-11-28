@@ -27,5 +27,12 @@
         transform: scale(1.1) rotate(5deg);
       }
     }
+
+    &__error-message{
+      width: 100%;
+      text-align: center;
+      font-weight: 700;
+      font-size: 1.5rem;
+    }
   }
 }
