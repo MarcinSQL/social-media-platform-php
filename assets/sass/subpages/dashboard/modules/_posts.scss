@@ -60,6 +60,9 @@
       margin: 1rem 0;
       width: 64px;
     }
+    &__container{
+      width: 100%;
+    }
     &__content {
       &__nickname {
         font-weight: 700;

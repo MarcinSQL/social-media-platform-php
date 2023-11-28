@@ -1,0 +1,17 @@
+@import "../../variables";
+
+@import "./modules/header";
+@import "./modules/main";
+@import "./modules/banner";
+@import "./modules/content";
+@import "./modules/posts";
+@import "./modules/footer";
+
+.posts {
+    margin-bottom: 4rem;
+  width: 100%;
+  .post {
+    margin: 2rem auto 0 auto;
+    width: 80%;
+  }
+}

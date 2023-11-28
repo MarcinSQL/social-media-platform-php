@@ -111,14 +111,6 @@
             echo ("</div>");
             echo ("<p class=\"friends__list__error-message\">Brak obserwatorów</p>");
           }
-
-          //   <div class="friend">
-          //   <a href="#" class="friend__link">
-          //     <img class="friend__picture" src="../assets/img/default-profile-picture-female-icon.svg" alt="Awatar przyjaciela użytkownika." />
-          //     <span class="friend__nickname">User Friend</span>
-          //   </a>
-          // </div>
-
           ?>
 
       </section>
@@ -130,21 +122,21 @@
           </button>
         </form>
         <div class="posts__list">
-        <?php
-        $check_posts = mysqli_query($db_connect, "SELECT `Id` FROM `posts` WHERE `User_Id` = " . $_SESSION['id']);
-        if (mysqli_num_rows($check_posts) > 0) {
-          while ($post = mysqli_fetch_assoc($check_posts)) {
-            foreach ($post as $k => $v) {
-              $post_get_info = mysqli_query($db_connect, "SELECT `Post`, `Likes` , `Date` FROM `posts` WHERE `Id` = " . $v);
-              $post_info = mysqli_fetch_array($post_get_info);
-              if ($_SESSION["userImg"] !== NULL) {
-                $userImgURL = $_SESSION["userImg"];
-              } else if ($_SESSION["userGender"] === "M") {
-                $userImgURL = "../assets/img/default-profile-picture-male-icon.svg";
-              } else {
-                $userImgURL = "../assets/img/default-profile-picture-female-icon.svg";
-              }
-              echo ("
+          <?php
+          $check_posts = mysqli_query($db_connect, "SELECT `Id` FROM `posts` WHERE `User_Id` = " . $_SESSION['id']);
+          if (mysqli_num_rows($check_posts) > 0) {
+            while ($post = mysqli_fetch_assoc($check_posts)) {
+              foreach ($post as $k => $v) {
+                $post_get_info = mysqli_query($db_connect, "SELECT `Post`, `Likes` , `Date` FROM `posts` WHERE `Id` = " . $v);
+                $post_info = mysqli_fetch_array($post_get_info);
+                if ($_SESSION["userImg"] !== NULL) {
+                  $userImgURL = $_SESSION["userImg"];
+                } else if ($_SESSION["userGender"] === "M") {
+                  $userImgURL = "../assets/img/default-profile-picture-male-icon.svg";
+                } else {
+                  $userImgURL = "../assets/img/default-profile-picture-female-icon.svg";
+                }
+                echo ("
               <div class=\"post\">
               <img class=\"post__picture\" src=\"$userImgURL\" alt=\"Awatar użytkownika.\" />
               <div class=\"post__container\">
@@ -154,7 +146,7 @@
                 </div>
                 <div class=\"post__footer\">
                   <div class=\"post__footer__like-section\">
-                    <a href=\"../app/likes.php?id=" . $v . "\" class=\"post__footer__like-section__like-btn\" id=\"post__footer__like-section__like-btn\">
+                    <a href=\"../app/likes.php?id=" . $v . "&location=userProfile\" class=\"post__footer__like-section__like-btn\" id=\"post__footer__like-section__like-btn\">
                       <img class=\"post__footer__like-section__like-btn__img\" src=\"../assets/img/heart-line-icon.svg\" alt=\"Polubienia.\" />
                     </a>
                     <span class=\"post__footer__like-section__like-counter\">" . $post_info[1] . "</span>
@@ -164,32 +156,12 @@
               </div>
             </div>
                 ");
+              }
             }
+          } else {
+            echo ("<p class=\"posts__error-message\">Brak wpisów</p>");
           }
-        } else {
-          echo ("<p class=\"posts__error-message\">Brak wpisów</p>");
-        }
-
-        //   <div class="post">
-        //   <img class="post__picture" src="../assets/img/default-profile-picture-male-icon.svg" alt="Awatar użytkownika." />
-        //   <div class="post__container">
-        //     <div class="post__content">
-        //       <p class="post__content__nickname">User</p>
-        //       <p class="post__content__message">My old post</p>
-        //     </div>
-        //     <div class="post__footer">
-        //       <div class="post__footer__like-section">
-        //         <button class="post__footer__like-section__like-btn">
-        //           <img class="post__footer__like-section__like-btn__img" src="../assets/img/heart-line-icon.svg" alt="Polubienia." />
-        //         </button>
-        //         <span class="post__footer__like-section__like-counter">0</span>
-        //       </div>
-        //       <span class="post__footer__date">21-03-2022</span>
-        //     </div>
-        //   </div>
-        // </div>
-
-        ?>
+          ?>
         </div>
       </section>
     </section>
