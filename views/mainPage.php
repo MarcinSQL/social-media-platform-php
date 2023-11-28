@@ -35,7 +35,7 @@
             </ul>
         </nav>
         <button class="header__user-info" id="header__user-info-btn">
-            <img class="header__user-info__picture" src="../assets/img/default-profile-picture-male-icon.svg" alt="Awatar użytkownika." />
+            <img class="header__user-info__picture" src=" <?php echo($_SESSION['userImg']) ?> " alt="Awatar użytkownika." />
             <span class="header__user-info__nickname">
                 <?php
                 if ($_SESSION['firstName'] !== null) {

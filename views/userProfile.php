@@ -35,7 +35,7 @@
       </ul>
     </nav>
     <button class="header__user-info" id="header__user-info-btn">
-      <img class="header__user-info__picture" src="../assets/img/default-profile-picture-male-icon.svg" alt="Awatar użytkownika." />
+      <img class="header__user-info__picture" src=" <?php echo($_SESSION['userImg']) ?> " alt="Awatar użytkownika." />
       <span class="header__user-info__nickname">
         <?php
         if ($_SESSION['firstName'] !== null) {
@@ -61,7 +61,7 @@
   <main class="main" id="main">
     <section class="banner">
       <div class="banner__user-profile">
-        <img src="../assets/img/default-profile-picture-male-icon.svg" alt="Awatar użytkownika." />
+        <img src=" <?php echo($_SESSION['userImg']) ?> " alt="Awatar użytkownika." />
         <span>
           <?php
           if ($_SESSION['firstName'] !== null) {
@@ -92,7 +92,7 @@
                 $friend_info = mysqli_fetch_array($friend_get_info);
                 if ($friend_info[3] !== NULL) {
                   $friendImgURL = $friend_info[3];
-                } else if ($friend_info[2] === "K") {
+                } else if ($friend_info[2] === "F") {
                   $friendImgURL = "../assets/img/default-profile-picture-female-icon.svg";
                 } else {
                   $friendImgURL = "../assets/img/default-profile-picture-male-icon.svg";

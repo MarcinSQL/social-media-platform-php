@@ -50,7 +50,13 @@
                   $_SESSION['loggedin'] = TRUE;
                   $_SESSION['firstName'] = $mysqlFirstName;
                   $_SESSION['lastName'] = $mysqlLastName;
-                  $_SESSION['userImg'] = $mysqlUserImg;
+                  if ($mysqlImg !== NULL) {
+                    $_SESSION['userImg'] = $mysqlImg;
+                  } else if ($mysqlGender === "F") {
+                    $_SESSION['userImg'] = "../assets/img/default-profile-picture-female-icon.svg";
+                  } else {
+                    $_SESSION['userImg'] = "../assets/img/default-profile-picture-male-icon.svg";
+                  }
                   $_SESSION['userGender'] = $mysqlGender;
                   $_SESSION['id'] = $mysqlId;
                   header('location: mainPage.php');
