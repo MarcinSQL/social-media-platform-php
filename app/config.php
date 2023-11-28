@@ -28,14 +28,12 @@ if (!$db_connect) {
 
     $posts_create_tab = mysqli_query($db_connect, "CREATE TABLE IF NOT EXISTS `posts` (
         `Id` INT(50) UNSIGNED NOT NULL AUTO_INCREMENT,
-        `Post_Id` INT(50) NOT NULL,
         `User_Id` INT(20) NOT NULL,
         `Post` TEXT NOT NULL,
         `UserImg` VARCHAR(400) NULL,
         `Likes` INT(11) NOT NULL DEFAULT 0,
         `Date` TIMESTAMP NOT NULL,
-        PRIMARY KEY (`Id`),
-        UNIQUE KEY (`Post_Id`)
+        PRIMARY KEY (`Id`)
     )");
 
     $follow_list_create_tab = mysqli_query($db_connect, "CREATE TABLE IF NOT EXISTS `follow_list`(

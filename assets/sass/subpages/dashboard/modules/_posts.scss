@@ -1,5 +1,9 @@
 .posts {
   width: 60%;
+  &__list {
+    display: flex;
+    flex-direction: column-reverse;
+  }
   &__new-post {
     background-color: $elements-color;
     border-radius: 16px;
@@ -77,6 +81,7 @@
           border: none;
           width: auto;
           height: 20px;
+          margin-right: 8px;
           & img {
             margin: 0;
             width: 16px;
@@ -85,6 +90,11 @@
         &__like-counter {
           font-weight: 700;
         }
+      }
+
+      .liked{
+        transform: scale(1.5) rotate(-360deg);
+        transition: all 0.6s ease-in-out;
       }
     }
   }

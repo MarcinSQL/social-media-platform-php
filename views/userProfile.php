@@ -123,18 +123,19 @@
 
       </section>
       <section class="posts">
-        <form action="#" method="post" class="posts__new-post">
+        <form action="../app/create-post.php" method="post" class="posts__new-post">
           <textarea class="posts__new-post__text" name="post-text" id="post-text" placeholder="Opowiedź coś..."></textarea>
           <button class="posts__new-post__submit-btn" type="submit">
             Udostępnij wpis!
           </button>
         </form>
+        <div class="posts__list">
         <?php
-        $check_posts = mysqli_query($db_connect, "SELECT `Post_Id` FROM `posts` WHERE `User_Id` = " . $_SESSION['id']);
+        $check_posts = mysqli_query($db_connect, "SELECT `Id` FROM `posts` WHERE `User_Id` = " . $_SESSION['id']);
         if (mysqli_num_rows($check_posts) > 0) {
           while ($post = mysqli_fetch_assoc($check_posts)) {
             foreach ($post as $k => $v) {
-              $post_get_info = mysqli_query($db_connect, "SELECT `Post`, `Likes` , `Date` FROM `posts` WHERE `Post_Id` = " . $v);
+              $post_get_info = mysqli_query($db_connect, "SELECT `Post`, `Likes` , `Date` FROM `posts` WHERE `Id` = " . $v);
               $post_info = mysqli_fetch_array($post_get_info);
               if ($_SESSION["userImg"] !== NULL) {
                 $userImgURL = $_SESSION["userImg"];
@@ -153,9 +154,9 @@
                 </div>
                 <div class=\"post__footer\">
                   <div class=\"post__footer__like-section\">
-                    <button class=\"post__footer__like-section__like-btn\">
+                    <a href=\"../app/likes.php?id=" . $v . "\" class=\"post__footer__like-section__like-btn\" id=\"post__footer__like-section__like-btn\">
                       <img class=\"post__footer__like-section__like-btn__img\" src=\"../assets/img/heart-line-icon.svg\" alt=\"Polubienia.\" />
-                    </button>
+                    </a>
                     <span class=\"post__footer__like-section__like-counter\">" . $post_info[1] . "</span>
                   </div>
                   <span class=\"post__footer__date\"> " . $post_info[2] . "</span>
@@ -189,7 +190,7 @@
         // </div>
 
         ?>
-
+        </div>
       </section>
     </section>
   </main>
@@ -197,6 +198,7 @@
     <p class="footer__copy">Copyright &copy; Marcin Wasilewski 2023</p>
   </footer>
   <script src="../assets/js/modalShow.js"></script>
+  <script src="../assets/js/likeBtn.js"></script>
 </body>
 
 </html>
